@@ -32,7 +32,10 @@ static NSString *const ZYCCellId = @"cell";
     [collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:ZYCCellId];
 }
 #pragma mark - <UICollectionViewDataSource>
-
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return 50;

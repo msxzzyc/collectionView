@@ -22,19 +22,32 @@
     return self;
 }
 /**
+ *当collectionview的显示范围发生改变时，是否需要重写布局
+ *一旦重写布局，就会调用layoutAttributesForElementsInRect:方法
+ */
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
+{
+    return YES;
+}
+/**
  *这个方法的返回值是一个数组（数组里面存放着rect范围内所有元素的布局属性）
  *这个方法的返回值决定了rect范围内所有元素的排布（frame）
  */
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
 {
     //获得super已经计算好的布局属性
-    NSArray *original = [super layoutAttributesForElementsInRect:rect];
-    NSArray *array =  [[NSArray alloc]initWithArray:original copyItems:YES];
+    NSArray *array = [super layoutAttributesForElementsInRect:rect];
+    //计算CollectionView最中心点的x值
+   CGFloat collectionViewCenterX = self.collectionView.contentOffset.x + self.collectionView.frame.size.width*0.5;
+
 
     //在原有布局属性的基础上，进行微调
-    for (UICollectionViewLayoutAttributes *attrs in original) {
-        CGFloat scale = arc4random_uniform(100/100.0);
-       
+    for (UICollectionViewLayoutAttributes *attrs in array) {
+        //计算cell的中心点x和collectionview中心点x的间距
+        CGFloat delta = ABS(attrs.center.x - collectionViewCenterX);
+        //根据间距值计算cell的缩放比例
+        CGFloat scale = 1.1 - delta/self.collectionView.frame.size.width;
+       //计算缩放比例
         attrs.transform = CGAffineTransformMakeScale(scale, scale);
     }
 
