@@ -16,6 +16,8 @@
 		121FA19E1F2F566E00D3A7A7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 121FA19C1F2F566E00D3A7A7 /* LaunchScreen.storyboard */; };
 		121FA1A91F2F566E00D3A7A7 /* collectionViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 121FA1A81F2F566E00D3A7A7 /* collectionViewUITests.m */; };
 		121FA1B51F2F61A200D3A7A7 /* ZYCLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 121FA1B41F2F61A200D3A7A7 /* ZYCLineLayout.m */; };
+		12225ED71F307EEF00035268 /* ZYCPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 12225ED51F307EEF00035268 /* ZYCPhotoCell.m */; };
+		12225ED81F307EEF00035268 /* ZYCPhotoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 12225ED61F307EEF00035268 /* ZYCPhotoCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,9 @@
 		121FA1AA1F2F566E00D3A7A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		121FA1B31F2F61A200D3A7A7 /* ZYCLineLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYCLineLayout.h; sourceTree = "<group>"; };
 		121FA1B41F2F61A200D3A7A7 /* ZYCLineLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYCLineLayout.m; sourceTree = "<group>"; };
+		12225ED41F307EEF00035268 /* ZYCPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZYCPhotoCell.h; path = ../ZYCPhotoCell.h; sourceTree = "<group>"; };
+		12225ED51F307EEF00035268 /* ZYCPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZYCPhotoCell.m; path = ../ZYCPhotoCell.m; sourceTree = "<group>"; };
+		12225ED61F307EEF00035268 /* ZYCPhotoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ZYCPhotoCell.xib; path = ../ZYCPhotoCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +91,9 @@
 		121FA18A1F2F566E00D3A7A7 /* collectionView */ = {
 			isa = PBXGroup;
 			children = (
+				12225ED41F307EEF00035268 /* ZYCPhotoCell.h */,
+				12225ED51F307EEF00035268 /* ZYCPhotoCell.m */,
+				12225ED61F307EEF00035268 /* ZYCPhotoCell.xib */,
 				121FA18E1F2F566E00D3A7A7 /* AppDelegate.h */,
 				121FA18F1F2F566E00D3A7A7 /* AppDelegate.m */,
 				121FA1911F2F566E00D3A7A7 /* ViewController.h */,
@@ -202,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				121FA19E1F2F566E00D3A7A7 /* LaunchScreen.storyboard in Resources */,
+				12225ED81F307EEF00035268 /* ZYCPhotoCell.xib in Resources */,
 				121FA19B1F2F566E00D3A7A7 /* Assets.xcassets in Resources */,
 				121FA1961F2F566E00D3A7A7 /* Main.storyboard in Resources */,
 			);
@@ -222,6 +231,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				121FA1931F2F566E00D3A7A7 /* ViewController.m in Sources */,
+				12225ED71F307EEF00035268 /* ZYCPhotoCell.m in Sources */,
 				121FA1901F2F566E00D3A7A7 /* AppDelegate.m in Sources */,
 				121FA1991F2F566E00D3A7A7 /* collectionView.xcdatamodeld in Sources */,
 				121FA18D1F2F566E00D3A7A7 /* main.m in Sources */,
@@ -420,6 +430,7 @@
 				121FA1AF1F2F566E00D3A7A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		121FA1B01F2F566E00D3A7A7 /* Build configuration list for PBXNativeTarget "collectionViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -428,6 +439,7 @@
 				121FA1B21F2F566E00D3A7A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

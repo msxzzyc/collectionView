@@ -33,6 +33,8 @@
 - (void)prepareLayout
 {
     [super prepareLayout];
+    //水平滚动
+    self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     //设置内边距
     CGFloat inset = (self.collectionView.frame.size.width - self.itemSize.width)*0.5;
     self.sectionInset = UIEdgeInsetsMake(0, inset, 0, inset);
@@ -59,7 +61,7 @@
         //计算cell的中心点x和collectionview中心点x的间距
         CGFloat delta = ABS(attrs.center.x - collectionViewCenterX);
         //根据间距值计算cell的缩放比例
-        CGFloat scale = 1.1 - delta/self.collectionView.frame.size.width;
+        CGFloat scale = 1.0 - delta/self.collectionView.frame.size.width;
        //计算缩放比例
         attrs.transform = CGAffineTransformMakeScale(scale, scale);
     }
@@ -77,7 +79,7 @@
     CGSize size = self.collectionView.frame.size;
     CGRect rect = CGRectMake(x, y, size.width, size.height);
     //获得super已经计算好的布局属性
-    NSArray *array = [self layoutAttributesForElementsInRect:rect];
+    NSArray *array = [super layoutAttributesForElementsInRect:rect];
     //计算collectionview中心点x
     CGFloat collectionViewCenterX = proposedContentOffset.x + self.collectionView.frame.size.width*0.5;
     //存放最小的间距值
